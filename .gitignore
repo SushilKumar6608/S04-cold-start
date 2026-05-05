@@ -1,0 +1,5 @@
+.env 
+__pycache__/ 
+data/raw/ 
+data/processed/embeddings.npy 
+data/processed/faiss_index.bin 
