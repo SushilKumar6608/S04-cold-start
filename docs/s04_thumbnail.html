@@ -30,7 +30,6 @@
     top: -120px; left: -120px;
     width: 500px; height: 500px;
     background: radial-gradient(circle, rgba(167,139,219,0.12) 0%, transparent 70%);
-    pointer-events: none;
   }
 
   .glow-br {
@@ -38,7 +37,6 @@
     bottom: -100px; right: -100px;
     width: 400px; height: 400px;
     background: radial-gradient(circle, rgba(102,217,160,0.10) 0%, transparent 70%);
-    pointer-events: none;
   }
 
   .content {
@@ -58,10 +56,10 @@
   }
 
   .right {
-    width: 420px;
+    width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
   }
 
   .tag {
@@ -103,61 +101,63 @@
     margin-bottom: 16px;
   }
 
-  h1 span { color: #b39ddb; }
+  h1 span.purple { color: #b39ddb; }
+  h1 span.green  { color: #66d9a0; }
 
   .subtitle {
-    font-size: 13px;
+    font-size: 12.5px;
     color: rgba(255,255,255,0.45);
-    line-height: 1.6;
-    max-width: 420px;
-    margin-bottom: 28px;
+    line-height: 1.65;
+    max-width: 430px;
+    margin-bottom: 24px;
   }
 
   .pipeline {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     margin-bottom: 4px;
     flex-wrap: wrap;
   }
 
   .pipe-step {
-    font-size: 9.5px;
+    font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 3px 8px;
+    padding: 3px 7px;
     border-radius: 3px;
     white-space: nowrap;
     border: 1px solid;
   }
 
-  .pipe-arrow { color: rgba(255,255,255,0.2); font-size: 12px; }
+  .pipe-arrow { color: rgba(255,255,255,0.2); font-size: 11px; }
 
   .badge {
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.06em;
-    padding: 4px 10px;
+    padding: 3px 9px;
     border-radius: 3px;
     border: 1px solid;
   }
 
-  .badge-purple{ color: #b39ddb; border-color: rgba(179,157,219,0.3); background: rgba(179,157,219,0.08); }
-  .badge-green { color: #66d9a0; border-color: rgba(102,217,160,0.3); background: rgba(102,217,160,0.08); }
-  .badge-blue  { color: #4fc3f7; border-color: rgba(79,195,247,0.3);  background: rgba(79,195,247,0.08); }
-  .badge-amber { color: #ffcc80; border-color: rgba(255,204,128,0.3); background: rgba(255,204,128,0.08); }
-  .badge-coral { color: #ff8a80; border-color: rgba(255,138,128,0.3); background: rgba(255,138,128,0.08); }
+  .badge-purple { color: #b39ddb; border-color: rgba(179,157,219,0.3); background: rgba(179,157,219,0.08); }
+  .badge-green  { color: #66d9a0; border-color: rgba(102,217,160,0.3); background: rgba(102,217,160,0.08); }
+  .badge-blue   { color: #4fc3f7; border-color: rgba(79,195,247,0.3);  background: rgba(79,195,247,0.08); }
+  .badge-amber  { color: #ffcc80; border-color: rgba(255,204,128,0.3); background: rgba(255,204,128,0.08); }
+  .badge-coral  { color: #ff8a80; border-color: rgba(255,138,128,0.3); background: rgba(255,138,128,0.08); }
 
-  .stack-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .stack-row { display: flex; flex-wrap: wrap; gap: 7px; }
 
   .metric-card {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 10px;
-    padding: 16px 20px;
+    padding: 14px 18px;
     position: relative;
     overflow: hidden;
+    flex: 1;
   }
 
   .metric-card::before {
@@ -168,32 +168,38 @@
     border-radius: 10px 0 0 10px;
   }
 
-  .mc-purple::before { background: #b39ddb; }
+  .mc-coral::before  { background: #ff8a80; }
   .mc-green::before  { background: #66d9a0; }
+  .mc-purple::before { background: #b39ddb; }
   .mc-blue::before   { background: #4fc3f7; }
   .mc-amber::before  { background: #ffcc80; }
 
   .metric-label {
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.35);
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
-  .metric-row { display: flex; align-items: baseline; gap: 10px; }
+  .metric-row { display: flex; align-items: baseline; gap: 8px; }
 
   .metric-value {
     font-family: 'Syne', sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: -0.02em;
   }
 
-  .metric-sub { font-size: 11px; color: rgba(255,255,255,0.35); }
-  .metric-detail { font-size: 10.5px; color: rgba(255,255,255,0.25); margin-top: 3px; }
+  .metric-sub  { font-size: 10px; color: rgba(255,255,255,0.35); }
+  .metric-detail { font-size: 9.5px; color: rgba(255,255,255,0.22); margin-top: 3px; }
+
+  .comparison-row {
+    display: flex;
+    gap: 10px;
+  }
 
   .divider {
     width: 1px;
@@ -201,7 +207,7 @@
     align-self: stretch;
   }
 
-  .author { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+  .author { font-size: 10.5px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
 </style>
 </head>
 <body>
@@ -212,30 +218,33 @@
 <div class="content">
   <div class="left">
     <div>
-      <div class="tag"><div class="dot"></div>Cold-Start · Zero interaction data</div>
-      <h1>Content<br><span>Cold-Start</span><br>Solver</h1>
-      <p class="subtitle">Semantic embeddings + FAISS similarity search to recommend new content before any user interaction data exists. Claude LLM enhances vague queries and explains recommendations.</p>
+      <div class="tag"><div class="dot"></div>Item Cold-Start · Benchmarked vs CF</div>
+      <h1>Content<br><span class="purple">Cold-Start</span><br><span class="green">Solver</span></h1>
+      <p class="subtitle">Solves the item cold-start problem with metadata embeddings + FAISS. 
+      Benchmarked against SVD collaborative filtering on MovieLens 25M — 
+      CF covers 0% of new items; embedding system covers 100%. 
+      Claude Sonnet enhances queries and explains results.</p>
       <div class="pipeline">
-        <span class="pipe-step badge-purple">Metadata</span>
+        <span class="pipe-step badge-purple">TMDB Metadata</span>
         <span class="pipe-arrow">→</span>
         <span class="pipe-step badge-blue">MiniLM Embed</span>
         <span class="pipe-arrow">→</span>
-        <span class="pipe-step badge-green">FAISS Index</span>
+        <span class="pipe-step badge-green">FAISS · 7ms</span>
         <span class="pipe-arrow">→</span>
-        <span class="pipe-step badge-amber">Claude LLM</span>
+        <span class="pipe-step badge-amber">Claude Sonnet</span>
         <span class="pipe-arrow">→</span>
         <span class="pipe-step badge-coral">Recommendations</span>
       </div>
     </div>
 
     <div>
-      <div class="stack-row" style="margin-bottom: 16px;">
+      <div class="stack-row" style="margin-bottom: 14px;">
         <span class="badge badge-purple">sentence-transformers</span>
         <span class="badge badge-green">FAISS</span>
         <span class="badge badge-blue">Claude Sonnet</span>
-        <span class="badge badge-amber">Streamlit</span>
-        <span class="badge badge-coral">TMDB · 44k movies</span>
-        <span class="badge badge-purple">all-MiniLM-L6-v2</span>
+        <span class="badge badge-amber">MovieLens 25M</span>
+        <span class="badge badge-coral">SVD baseline</span>
+        <span class="badge badge-purple">Streamlit</span>
       </div>
       <div class="author">Ganisetty Sai Surya Sushil Kumar · MSc AI &amp; Automation, University West</div>
     </div>
@@ -244,41 +253,53 @@
   <div class="divider"></div>
 
   <div class="right">
-    <div class="metric-card mc-purple">
-      <div class="metric-label">Dataset · TMDB Metadata</div>
-      <div class="metric-row">
-        <span class="metric-value">44,937</span>
-        <span class="metric-sub">movies indexed</span>
+
+    <div class="comparison-row">
+      <div class="metric-card mc-coral">
+        <div class="metric-label">CF · New Movies</div>
+        <div class="metric-row">
+          <span class="metric-value" style="color:#ff8a80;">0%</span>
+          <span class="metric-sub">coverage</span>
+        </div>
+        <div class="metric-detail">SVD sees 0 of 7,890 post-2015 movies</div>
       </div>
-      <div class="metric-detail">English · vote_count ≥ 10 · overview + genres + keywords + tagline</div>
+      <div class="metric-card mc-green">
+        <div class="metric-label">Embedding · New Movies</div>
+        <div class="metric-row">
+          <span class="metric-value" style="color:#66d9a0;">100%</span>
+          <span class="metric-sub">coverage</span>
+        </div>
+        <div class="metric-detail">Metadata only · no ratings needed</div>
+      </div>
+    </div>
+
+    <div class="metric-card mc-purple">
+      <div class="metric-label">Dataset · MovieLens 25M + TMDB</div>
+      <div class="metric-row">
+        <span class="metric-value">25M</span>
+        <span class="metric-sub">ratings</span>
+      </div>
+      <div class="metric-detail">162k users · 44,937 movies indexed · 88.2% new movies sparse</div>
     </div>
 
     <div class="metric-card mc-blue">
-      <div class="metric-label">Embedding Model · all-MiniLM-L6-v2</div>
+      <div class="metric-label">Embedding · all-MiniLM-L6-v2</div>
       <div class="metric-row">
         <span class="metric-value">384</span>
-        <span class="metric-sub">dimensions</span>
+        <span class="metric-sub">dim</span>
       </div>
-      <div class="metric-detail">Sentence-transformers · cosine similarity · FAISS IndexFlatIP</div>
-    </div>
-
-    <div class="metric-card mc-green">
-      <div class="metric-label">Query Enhancement · Claude Sonnet</div>
-      <div class="metric-row">
-        <span class="metric-value">2×</span>
-        <span class="metric-sub">retrieval modes</span>
-      </div>
-      <div class="metric-detail">Direct search + AI-expanded query · natural language explanations</div>
+      <div class="metric-detail">Cosine similarity · FAISS IndexFlatIP · 7ms search latency</div>
     </div>
 
     <div class="metric-card mc-amber">
-      <div class="metric-label">App · Streamlit · 2 Tabs</div>
+      <div class="metric-label">App · Streamlit · 3 Tabs</div>
       <div class="metric-row">
-        <span class="metric-value">~50ms</span>
-        <span class="metric-sub">search latency</span>
+        <span class="metric-value">3</span>
+        <span class="metric-sub">modes</span>
       </div>
-      <div class="metric-detail">Find Movies tab + New Movie Concept tab · rating filter · live demo</div>
+      <div class="metric-detail">Cold-Start Demo · Find Movies · New Movie Concept</div>
     </div>
+
   </div>
 </div>
 </body>
