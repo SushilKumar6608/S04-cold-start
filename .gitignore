@@ -3,3 +3,4 @@ __pycache__/
 data/raw/ 
 data/processed/embeddings.npy 
 data/processed/faiss_index.bin 
+notebooks/09_confirm_stats.py 
